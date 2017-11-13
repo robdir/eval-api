@@ -1,5 +1,5 @@
-// dependencies, namely mongoose for mongoDB connection
-// passportLocalMongoose(whatever that is)
+const mongoose = require('../config/database')
+const { Schema } = mongoose
 
 const userSchema = new Schema({
   name: { type: String, required: true },
@@ -7,3 +7,5 @@ const userSchema = new Schema({
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 })
+
+module.exports = mongoose.model('users', userSchema)

@@ -1,11 +1,19 @@
 const express = require('express')
+const { Class } = require('./models')
 
 const PORT = process.env.PORT || 3030
 
 let app = express()
 
-// an extremely basic GET from the server, these will eventually serve
-// up all the data requested, though via ROUTES dir
+app.get('/classes', (req, res, next) => {
+  Class.find()
+
+  .sort({ batchNum: -1 })
+  .then((classes) => res.json(classes))
+  .catch((error) => next(error))
+})
+
+
 app.get('/', (req, res) => {
   res.send('Hello from Express!')
 })
