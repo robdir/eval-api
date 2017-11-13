@@ -1,0 +1,11 @@
+{
+  "name": "evaluation-app-API",
+  "version": "1.0.0",
+  "description": "RESTful API to manage evaluation-app",
+  "main": "index.js",
+  "author": "RW",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
