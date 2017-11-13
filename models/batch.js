@@ -15,7 +15,7 @@ const studentSchema = new Schema({
   ratings: [ratingsSchema]
 });
 
-const classSchema = new Schema({
+const batchSchema = new Schema({
   students: [studentSchema],
   numberOfStudents: [Number],
   batchNum: { type: Number },
@@ -24,4 +24,4 @@ const classSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('classes', classSchema)
+module.exports = mongoose.model('batches', batchSchema)

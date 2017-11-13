@@ -1,21 +1,26 @@
 const express = require('express')
-const { Class } = require('./models')
+const { Batch } = require('./models')
 
 const PORT = process.env.PORT || 3030
 
 let app = express()
 
-app.get('/classes', (req, res, next) => {
-  Class.find()
-
-  .sort({ batchNum: -1 })
-  .then((classes) => res.json(classes))
-  .catch((error) => next(error))
+// all batches, newest batch first
+app.get('/batches', (req, res, next) => {
+  Batch.find()
+    .sort({ batchNum: -1 })
+    .then((batches) => res.json(batches))
+    .catch((error) => next(error))
 })
 
-
-app.get('/', (req, res) => {
-  res.send('Hello from Express!')
+app.get('/batches/:id', (req, res, next) => {
+  const id = req.params.id
+  Batch.findById(id)
+  .then((batch) => {
+    if (!batch) { return next()}
+    res.json(batch)
+  })
+  .catch((error) => next(error))
 })
 
 app.listen(PORT, () => {
