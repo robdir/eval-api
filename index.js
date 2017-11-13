@@ -1,5 +1,6 @@
 const express = require('express')
 const { Batch } = require('./models')
+const passport = require('./config/auth')
 
 const PORT = process.env.PORT || 3030
 

@@ -1,4 +1,5 @@
 const mongoose = require('../config/database')
+const passportLocalMongoose = require('passport-local-mongoose')
 const { Schema } = mongoose
 
 const userSchema = new Schema({
@@ -8,4 +9,5 @@ const userSchema = new Schema({
   updatedAt: { type: Date, default: Date.now }
 })
 
+userSchema.plugin(passportLocalMongoose, { usernameField: 'email' })
 module.exports = mongoose.model('users', userSchema)
