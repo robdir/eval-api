@@ -1,0 +1,232 @@
+[
+{
+  "numberOfStudents": 5,
+  "batchNum": 10,
+  "startsAt": "2017-08-23",
+  "endsAt": "2017-10-30",
+  "students": [
+    {
+      "id": "01",
+      "name": "Brita Everard",
+      "picture": "https://randomuser.me/api/portraits/women/30.jpg",
+      "ratings": [
+        {
+          "colour": 0,
+          "comments": "Teaching Brita is akin to bathing in hot sauce.",
+          "ratedAt":  "2017-08-28"
+        },
+        {
+          "colour": 1,
+          "comments": "Progress is being made.",
+          "ratedAt": "2017-08-29"
+        },
+      ]
+      {
+        "id": "02",
+        "name": "Jurgen Richard",
+        "picture": "https://randomuser.me/api/portraits/men/8.jpg",
+        "ratings":
+        [
+          {
+            "colour": 2,
+            "comments": "Excellent start to the academy.",
+            "ratedAt":  "2017-08-28"
+          },
+          {
+            "colour": 1,
+            "comments": "Less impressive than yesterday.",
+            "ratedAt": "2017-08-29"
+          },
+        ]
+        {
+          "id": "03",
+          "name": "George Edwinson",
+          "picture": "https://randomuser.me/api/portraits/men/35.jpg",
+          "ratings":
+          [
+            {
+              "colour": 0,
+              "comments": "Not a great start to the academy.",
+              "ratedAt":  "2017-08-28"
+            },
+            {
+              "colour": 1,
+              "comments": "Much better work than yesterday.",
+              "ratedAt": "2017-08-29"
+            },
+          ]
+          {
+            "id": "03",
+            "name": "George Edwinson",
+            "picture": "https://randomuser.me/api/portraits/men/35.jpg",
+            "ratings":
+            [
+              {
+                "colour": 2,
+                "comments": "Excellent work",
+                "ratedAt":  "2017-08-28"
+              },
+              {
+                "colour": 2,
+                "comments": "Answered all questions correctly",
+                "ratedAt": "2017-08-29"
+              },
+            ]
+            {
+              "id": "04",
+              "name": "Sarah Palmer",
+              "picture": "https://randomuser.me/api/portraits/women/13.jpg",
+              "ratings":
+              [
+                {
+                  "colour": 1,
+                  "comments": "Good work, can do better",
+                  "ratedAt":  "2017-08-28"
+                },
+                {
+                  "colour": 2,
+                  "comments": "Answered all questions correctly",
+                  "ratedAt": "2017-08-29"
+                },
+              ]
+              {
+                "id": "05",
+                "name": "Sandhya Randal",
+                "picture": "https://randomuser.me/api/portraits/women/88.jpg",
+                "ratings":
+                [
+                  {
+                    "colour": 0,
+                    "comments": "Not a great start to the academy.",
+                    "ratedAt":  "2017-08-28"
+                  },
+                  {
+                    "colour": 1,
+                    "comments": "Much better work than yesterday.",
+                    "ratedAt": "2017-08-29"
+                  },
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+{
+  "numberOfStudents": 5,
+  "batchNum": 11,
+  "startsAt": "2017-10-23",
+  "endsAt": "2017-12-20",
+  "students": [
+    {
+      "id": "06",
+      "name": "Jodoc Hafsah",
+      "picture": "https://randomuser.me/api/portraits/men/87.jpg",
+      "ratings": [
+        {
+          "colour": 0,
+          "comments": "Student is obviously struggling.",
+          "ratedAt":  "2017-10-24"
+        },
+        {
+          "colour": 1,
+          "comments": "Progress is being made.",
+          "ratedAt": "2017-10-25"
+        },
+      ]
+      {
+        "id": "07",
+        "name": "Kaye Proserpina",
+        "picture": "https://randomuser.me/api/portraits/women/41.jpg",
+        "ratings":
+        [
+          {
+            "colour": 2,
+            "comments": "Excellent start to the academy.",
+            "ratedAt":  "2017-10-24"
+          },
+          {
+            "colour": 1,
+            "comments": "Less impressive than yesterday.",
+            "ratedAt": "2017-10-25"
+          },
+        ]
+        {
+          "id": "08",
+          "name": "Jórunnr Evan",
+          "picture": "https://randomuser.me/api/portraits/men/79.jpg",
+          "ratings":
+          [
+            {
+              "colour": 0,
+              "comments": "Not a great start to the academy.",
+              "ratedAt":  "2017-10-24"
+            },
+            {
+              "colour": 1,
+              "comments": "Much better work than yesterday.",
+              "ratedAt": "2017-10-25"
+            },
+          ]
+          {
+            "id": "09",
+            "name": "Róisín Iezekiel",
+            "picture": "https://randomuser.me/api/portraits/women/46.jpg",
+            "ratings":
+            [
+              {
+                "colour": 2,
+                "comments": "Excellent work",
+                "ratedAt":  "2017-10-24"
+              },
+              {
+                "colour": 2,
+                "comments": "Answered all questions correctly",
+                "ratedAt": "2017-10-25"
+              },
+            ]
+            {
+              "id": "10",
+              "name": "Cornelia Valentina",
+              "picture": "https://randomuser.me/api/portraits/women/81.jpg",
+              "ratings":
+              [
+                {
+                  "colour": 1,
+                  "comments": "Good work, can do better",
+                  "ratedAt":  "2017-10-24"
+                },
+                {
+                  "colour": 2,
+                  "comments": "Answered all questions correctly",
+                  "ratedAt": "2017-10-25"
+                },
+              ]
+              {
+                "id": "11",
+                "name": "Joonas Vinicius",
+                "picture": "https://randomuser.me/api/portraits/men/10.jpg",
+                "ratings":
+                [
+                  {
+                    "colour": 0,
+                    "comments": "Not a great start to the academy.",
+                    "ratedAt":  "2017-10-24"
+                  },
+                  {
+                    "colour": 1,
+                    "comments": "Much better work than yesterday.",
+                    "ratedAt": "2017-10-25"
+                  },
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
+]
