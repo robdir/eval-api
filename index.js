@@ -1,28 +1,35 @@
 const express = require('express')
-const { Batch } = require('./models')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const { batches, users, sessions } = require('./routes')
 const passport = require('./config/auth')
 
 const PORT = process.env.PORT || 3030
 
-let app = express()
+const app = express()
 
-// all batches, newest batch first
-app.get('/batches', (req, res, next) => {
-  Batch.find()
-    .sort({ batchNum: -1 })
-    .then((batches) => res.json(batches))
-    .catch((error) => next(error))
-})
+app
+  .use(cors())
+  .use(bodyParser.urlencoded({ extended: true }))
+  .use(bodyParser.json())
+  .use(passport.initialize())
+  .use(batches)
+  .use(users)
+  .use(sessions)
 
-app.get('/batches/:id', (req, res, next) => {
-  const id = req.params.id
-  Batch.findById(id)
-  .then((batch) => {
-    if (!batch) { return next()}
-    res.json(batch)
+  .use((req, res, next) => {
+    const err = new Error('Not Found')
+    err.status = 404
+    next(err)
+    })
+
+  .use((err, req, res, next) => {
+    res.status(err.status || 500)
+    res.send({
+      message: err.message,
+      error: app.get('env') === 'development' ? err : {}
+    })
   })
-  .catch((error) => next(error))
-})
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)

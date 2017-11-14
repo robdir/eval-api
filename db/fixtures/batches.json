@@ -1,0 +1,48 @@
+[
+{
+  "batchNum": 10,
+  "startsAt": "2017-08-23",
+  "endsAt": "2017-10-30",
+  "students": [
+    {
+      "name": "Brita Everard",
+      "picture": "https://randomuser.me/api/portraits/women/30.jpg",
+      "ratings": [
+        {
+          "colour": 0,
+          "comments": "Teaching Brita is akin to bathing in hot sauce.",
+          "ratedAt":  "2017-08-28"
+        },
+        {
+          "colour": 1,
+          "comments": "Progress is being made.",
+          "ratedAt": "2017-08-29"
+        }
+      ]
+    }
+  ]
+},
+{
+  "batchNum": 11,
+  "startsAt": "2017-10-23",
+  "endsAt": "2017-12-30",
+  "students": [
+    {
+      "name": "Jodoc Hafsah",
+      "picture": "https://randomuser.me/api/portraits/men/87.jpg",
+      "ratings": [
+        {
+          "colour": 0,
+          "comments": "Student is obviously struggling.",
+          "ratedAt":  "2017-10-24"
+        },
+        {
+          "colour": 1,
+          "comments": "Progress is being made.",
+          "ratedAt": "2017-08-29"
+        }
+      ]
+    }
+  ]
+}
+]
