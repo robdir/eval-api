@@ -6,7 +6,7 @@ const createUrl = (path) => {
   return `${process.env.HOST || `http://localhost:${process.env.PORT || 3030}`}${path}`
 }
 
-const createBatches = (token) => {
+const seedBatches = (token) => {
   return batches.map((batch) => {
     return request
       .post(createUrl('/batches'))
@@ -27,7 +27,7 @@ const authenticate = (email, password) => {
     .send({ email, password })
     .then((res) => {
       console.log('Successfully authenticated')
-      return createBatches(res.body.token)
+      return seedBatches(res.body.token)
     })
     .catch((err) => {
       console.log('Failed to authenticate', err.message)

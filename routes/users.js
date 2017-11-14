@@ -8,7 +8,9 @@ router.post('/users', (req, res, next) => {
       err.status = 422
       return next(err)
     }
-    res.status(201).send(user)
+
+    const { name, email, _id, createdAt, updatedAt } = user
+    res.status(201).send({ name, email, _id, createdAt, updatedAt })
   })
 })
 
@@ -18,6 +20,7 @@ router.get('/users/me', passport.authorize('jwt', { session: false }), (req, res
     error.status = 401
     next(error)
   }
+
   res.json(req.account)
 })
 

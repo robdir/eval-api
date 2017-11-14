@@ -9,14 +9,12 @@ const ratingsSchema = new Schema({
 });
 
 const studentSchema = new Schema({
-  id: { type: Schema.Types.ObjectId },
   name: { type: String },
   picture: { type: String },
   ratings: [ratingsSchema]
 });
 
 const batchSchema = new Schema({
-  numberOfStudents: [Number],
   batchNum: { type: Number },
   startsAt: { type: Date},
   endsAt: { type: Date },
