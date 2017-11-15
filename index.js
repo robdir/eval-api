@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const { batches, users, sessions } = require('./routes')
+const { batches, users, sessions, batchStudents } = require('./routes')
 const passport = require('./config/auth')
 
 const PORT = process.env.PORT || 3030
@@ -14,6 +14,7 @@ app
   .use(bodyParser.json())
   .use(passport.initialize())
   .use(batches)
+  .use(batchStudents)
   .use(users)
   .use(sessions)
 

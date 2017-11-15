@@ -8,6 +8,7 @@ const ratingsSchema = new Schema({
 });
 
 const studentSchema = new Schema({
+  batchId: { type: Schema.Types.ObjectId, ref: 'batches' },
   name: { type: String },
   picture: { type: String },
   ratings: [{ratingsSchema}]
