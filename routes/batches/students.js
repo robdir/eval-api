@@ -12,9 +12,12 @@ const findBatch = (req, res, next) => {
     .catch((error) => next(error))
 }
 
-router.get('/batches/:id/students', findBatch, (req, res) => {
-  req.students = req.batch.students
-  res.json(req.students)
+router.get('/batches/:id/students', findBatch, (req, res, next) => {
+  students = req.batch.students
+  students.find()
+    .sort({ name: 1})
+    .then((students) => res.json(students))
+    .catch((error) => next(error))
 })
 
 module.exports = router
