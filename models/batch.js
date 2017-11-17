@@ -1,6 +1,7 @@
 const mongoose = require('../config/database')
 const { Schema } = mongoose
 
+
 const ratingsSchema = new Schema({
   colour: { type: Number, min: 0, max: 2 },
   comments: { type: String },
@@ -8,10 +9,12 @@ const ratingsSchema = new Schema({
 });
 
 const studentSchema = new Schema({
+  batchId: { type: Schema.Types.ObjectId, ref: 'batches'},
   name: { type: String },
   picture: { type: String },
   ratings: [ratingsSchema],
 });
+
 
 const batchSchema = new Schema({
   batchNum: { type: Number },
