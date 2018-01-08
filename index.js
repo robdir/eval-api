@@ -32,10 +32,6 @@ app
     })
   })
 
-app.get('/', (res, req) => {
-  res.send('Evaluation server running')
-})
-
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
 })

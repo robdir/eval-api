@@ -8,7 +8,11 @@ router.get('/batches', (req, res, next) => {
     .catch((error) => next(error))
 })
 
-.get('/batches/:id', (req, res, next) => {
+router.get('/', (req, res) => {
+  res.send('Evaluation server running: ' + '\n' + 'enter /batches to view json data')
+})
+
+router.get('/batches/:id', (req, res, next) => {
   const id = req.params.id
   Batch.findById(id)
   .then((batch) => {
@@ -18,7 +22,7 @@ router.get('/batches', (req, res, next) => {
   .catch((error) => next(error))
 })
 
-.post('/batches', (req, res, next) => {
+router.post('/batches', (req, res, next) => {
   let newBatch = req.body
   // batch will probably need id of batch...
   Batch.create(newBatch)
