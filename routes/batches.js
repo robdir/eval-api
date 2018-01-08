@@ -1,6 +1,12 @@
 const router = require('express').Router()
 const { Batch } = require('../models')
 
+
+router.get('/', (req, res) => {
+  res.send('Evaluation server running: ' + '\n' + 'enter /batches to view json data')
+})
+
+
 router.get('/batches', (req, res, next) => {
   Batch.find()
     .sort({ batchNum: -1 })
@@ -8,11 +14,7 @@ router.get('/batches', (req, res, next) => {
     .catch((error) => next(error))
 })
 
-router.get('/', (req, res) => {
-  res.send('Evaluation server running: ' + '\n' + 'enter /batches to view json data')
-})
-
-router.get('/batches/:id', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
   const id = req.params.id
   Batch.findById(id)
   .then((batch) => {
