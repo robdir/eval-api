@@ -12,7 +12,7 @@ const findBatch = (req, res, next) => {
     .catch((error) => next(error))
 }
 
-router.get('/batches/:id/students', findBatch, (req, res, next) => {
+router.get('/:id/students', findBatch, (req, res, next) => {
   students = req.batch.students
   students.find()
     .sort({ name: 1})
