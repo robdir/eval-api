@@ -18,7 +18,6 @@ router.get('/:id', (req, res, next) => {
   const id = req.params.id
   Batch.findById(id)
   .then((batch) => {
-    console.log('HEY BRUDDA')
     if (!batch) { return next()} 
     res.json(batch)
   })
