@@ -26,7 +26,6 @@ router.get('/:id', (req, res, next) => {
 
 router.post('/batches', (req, res, next) => {
   let newBatch = req.body
-  // batch will probably need id of batch...
   Batch.create(newBatch)
     .then((batch) => res.json(batch))
     .catch((error) => next(error))
