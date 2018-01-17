@@ -3,7 +3,7 @@ const { Batch } = require('../models')
 
 
 router.get('/', (req, res) => {
-  res.send('Evaluation server running: ' + '\n' + 'enter /batches to view json data')
+  res.send('Evaluation server running: enter /batches to view json data')
 })
 
 
