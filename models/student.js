@@ -1,5 +1,5 @@
 const mongoose = require('../config/database')
-const Schema = mongoose
+const {Schema} = mongoose
 
 const ratingsSchema = new Schema({
     colour: { type: Number, min: 0, max: 2 },
