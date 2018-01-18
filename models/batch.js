@@ -16,8 +16,8 @@ const studentSchema = new Schema({
 
 const batchSchema = new Schema({
   batchNum: { type: Number },
-  startsAt: { type: Date },
-  endsAt: { type: Date },
+  startsAt: { type: Date, default: Date.now },
+  endsAt: { type: Date, default: Date.now },
   students: [studentSchema],
 });
 
