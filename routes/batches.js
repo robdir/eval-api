@@ -31,4 +31,24 @@ router.post('/batches', (req, res, next) => {
     .catch((error) => next(error))
 })
 
+// creating a student i.e. appending the current batch with a new student model
+
+const findBatch = (req, res, next) => {
+  const id = req.params.id
+
+  Batch.findById(id)
+    .then((batch) => {
+      req.batch = batch
+      next()
+    })
+    .catch((error) => next(error))
+}
+
+router.patch('./id', findBatch, (req, res, next) => {
+  let student = req.body
+  Batch.append(student)
+    .then((batch) => res.json(batch))
+    .catch((error) => next(error))
+})
+
 module.exports = router
