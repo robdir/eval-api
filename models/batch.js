@@ -8,7 +8,6 @@ const ratingsSchema = new Schema({
 });
 
 const studentSchema = new Schema({
-  batchId: { type: mongoose.Schema.Types.ObjectId, ref: 'batches' },
   name: { type: String },
   picture: { type: String },
   ratings: [ratingsSchema],
@@ -16,8 +15,8 @@ const studentSchema = new Schema({
 
 const batchSchema = new Schema({
   batchNum: { type: Number },
-  startsAt: { type: Date, default: Date.now },
-  endsAt: { type: Date, default: Date.now },
+  startsAt: { type: String },
+  endsAt: { type: String },
   students: [studentSchema],
 });
 
