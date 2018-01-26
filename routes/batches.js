@@ -46,9 +46,13 @@ router.patch('./:id', (req, res, next) => {
 router.delete('/:id', (res, req, next) =>{
   const id = req.params.id
   Batch.findByIdAndRemove(id)
-  .then((batch) => {
-    if (!batch) {return next()}
-  })
+    .then(() => {
+      res.status = 200
+      res.json({
+        message: 'Batch removed',
+        _id: id
+      })
+    })
     .catch((error) => next(error))
 })
 
