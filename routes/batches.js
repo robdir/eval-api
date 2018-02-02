@@ -25,19 +25,18 @@ router.get('/:id', (req, res, next) => {
 })
 
 router.post('/batches', (req, res, next) => {
-  let newBatch = req.body
+  const newBatch = req.body
   Batch.create(newBatch)
     .then((batch) => res.json(batch))
     .catch((error) => next(error))
 })
 
-// use findbyIdandUpdate? check express/mongo docs ??
 
 router.patch('./:id', (req, res, next) => {
   const id = req.params.id
-  Batch.findByIdAndUpdate(id)
-  let student = req.body
-  Batch.append(student)
+  const student = req.body
+
+  Batch.findByIdAndUpdate(id, { $set: student }, { new: true})
     .then((batch) => res.json(batch))
     .catch((error) => next(error))
 })
